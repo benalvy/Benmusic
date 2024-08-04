@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="benlogo.png">
+    <title>MEGAMIND</title>
+</head>
+<body>
+    <h1>MEGAMIND</h1>
+    <div class="parent">
+        <div class="login">
+            <form id="loginForm">
+                <h2>LOGIN</h2>
+                <label>Username</label><br>
+                <input type="text" name="username" placeholder="username" required><br>
+                <label>Password</label><br>
+                <input type="password" name="password" placeholder="password" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <a href="register.html">NEW USER? REGISTER HERE!</a>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                alert('Login successful');
+                window.location.href = 'home.html';
+            } else {
+                alert('Login failed');
+            }
+        });
+    </script>
+</body>
+</html>

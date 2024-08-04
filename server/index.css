@@ -1,0 +1,112 @@
+body
+{
+background-image:url(johannes-plenio-voQ97kezCx0-unsplash.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-color: rgb(3, 3, 3);
+
+}
+.parent
+{
+  display: flex;
+  justify-content: center;
+}
+.login
+{
+  background-color:none;
+display: flex;
+height: 300px;
+width: 20%;
+justify-content: center;
+border: 1px solid white;
+border-width:1px;
+border-radius: 20px;
+}
+label
+{
+  opacity: 2;
+  font-size: larger;
+  font-weight: bold;
+}
+input
+{
+  height: 20px;
+  border-radius: 5px;
+  border-width: 0;
+  height: 30px;
+  background-color:white;
+  opacity: 0.5;
+  font-size: larger;
+}
+h1
+{
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  color: antiquewhite;
+  font-family:Helvetica;
+}
+h2
+{
+  text-align: center;
+  color: rgb(156, 211, 55);
+  text-decoration: underline;
+}
+#but
+{
+  border-radius: 5px;
+  border-width: 0;
+  height: 30px;
+  display:inline;
+  opacity: 1;
+  background-color: greenyellow;
+}
+#but:hover
+{
+  background-color: blue;
+}
+a
+{
+  color:yellow;
+  text-align: center;
+  font-size:20px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width:414px) 
+{
+  .login
+  {
+    width:100%;
+  }
+}
+@media (max-width: 640px) 
+{
+  .login
+  {
+    width:100%;
+  }
+}
+@media (max-width:768px) 
+{
+  .login
+  {
+    width:30%;
+  }
+}
+@media (max-width: 1024px) 
+{
+  .login
+  {
+    width:50%;
+  }
+}
+@media (max-width: 375px) 
+{
+  .login
+  {
+    width:100%;
+  }
+  
+}
